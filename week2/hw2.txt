@@ -1,38 +1,43 @@
-1)
-https://www.blockchain.com/eth/tx/0xb9316bbbae1cd21cd824de8651c72582261230724b1957abdeb466aa96a359c9
+Using the blockchain explorer, have a look at the following transactions, what do they do ?
+0xb9316bbbae1cd21cd824de8651c72582261230724b1957abdeb466aa96a359c9 0x4fc1580e7f66c58b7c26881cce0aab9c3509afe6e507527f30566fbf8039bcd0 0x552bc0322d78c5648c5efa21d2daa2d0f14901ad4b15531f1ab5bbe5674de34f 0x7a026bf79b36580bf7ef174711a3de823ff3c93c65304c3acc0323c77d62d0ed 0x814e6a21c8eb34b62a05c1d0b14ee932873c62ef3c8575dc49bcf12004714eda
+What is the largest account balance you can find ?
+What is special about these accounts : 0x1db3439a222c519ab44bb1144fc28167b4fa6ee6 0x000000000000000000000000000000000000dEaD
 
-Gives "An error 500 occurred on server" string
+
+1)
+https://etherscan.io/tx/0xb9316bbbae1cd21cd824de8651c72582261230724b1957abdeb466aa96a359c9
+Dao hack
 
 2)
-https://www.blockchain.com/eth/tx/0x4fc1580e7f66c58b7c26881cce0aab9c3509afe6e507527f30566fbf8039bcd0
-
+https://etherscan.io/tx/0x4fc1580e7f66c58b7c26881cce0aab9c3509afe6e507527f30566fbf8039bcd0
+Uniswap depolyment
 This transaction was first broadcast to the Ethereum network on June 05, 2020 at 1:17 PM PDT.  The transaction currently has 3,381,928 confirmations on the network.  At the time of this transaction, 0.000000000000000000 ETH was sent with a value of $0.00. The current value of this transaction is now $0.00.  
 
-Just puts data at that address
+[Contract 0x7a250d5630b4cf539739df2c5dacb4c659f2488dCreated] (Uniswap V2: Router 2)
 
 3)
-https://www.blockchain.com/eth/tx/0x552bc0322d78c5648c5efa21d2daa2d0f14901ad4b15531f1ab5bbe5674de34f
+https://etherscan.io/tx/0x552bc0322d78c5648c5efa21d2daa2d0f14901ad4b15531f1ab5bbe5674de34f
+Poly hack
+This transaction was first broadcast to the Ethereum network on August 10, 2021 at 9:05 AM PDT.  
 
-This transaction was first broadcast to the Ethereum network on August 10, 2021 at 9:05 AM PDT.  The transaction currently has 591,375 confirmations on the network.  At the time of this transaction, 0.000000000000000000 ETH was sent with a value of $0.00. The current value of this transaction is now $0.00.  
-
-Just puts data at that address
 
 4)
-0x7a026bf79b36580bf7ef174711a3de823ff3c93c65304c3acc0323c77d62d0ed
-
-This transaction was first broadcast to the Ethereum network on August 12, 2021 at 7:52 AM PDT.  The transaction currently has 578,800 confirmations on the network.  At the time of this transaction, 0.000000000000000000 ETH was sent with a value of $0.00. The current value of this transaction is now $0.00.  
+https://etherscan.io/tx/0x7a026bf79b36580bf7ef174711a3de823ff3c93c65304c3acc0323c77d62d0ed
+Attacker giving back some of DAI stable coin back to Polynetwork
+This transaction was first broadcast to the Ethereum network on August 12, 2021 at 7:52 AM PDT.  
 
 5)
 0x814e6a21c8eb34b62a05c1d0b14ee932873c62ef3c8575dc49bcf12004714eda
-
+Polynetwork gave bounty back to attacker
 This transaction was first broadcast to the Ethereum network on August 18, 2021 at 7:31 PM PDT.  The transaction currently has 536,848 confirmations on the network.  At the time of this transaction, 160.000000000000000000 ETH was sent with a value of $481,492.80. The current value of this transaction is now $775,257.60.  
 
-Looks like it is transferring 160 ether.
-
-Largest account balance is $60,840,955.47
+Large balances:
+https://etherscan.io/accounts 
 
 
 Special about those accounts:
-You get a QR code for 0x1db3439a222c519ab44bb1144fc28167b4fa6ee6 and 0x000000000000000000000000000000000000dEaD
+Burn accounts to take token out of circulation
+https://etherscan.io/address/0x000000000000000000000000000000000000dEaD
+
 
 
