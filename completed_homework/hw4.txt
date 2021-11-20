@@ -1,0 +1,59 @@
+1.  a) mapping, ie: mapping(KeyType => ValueType) user_balanace; 
+1.  b) mapping(address => unit) balance;
+
+2. a) 
+
+mapping(address => uint) user_balance;
+
+function getUserBalanceList(address user) public view returns (uint) { 
+    return user_balance[user];
+}
+
+2. b) Use the public keyword: mapping(address => uint) public user_balance;
+
+
+3.  constructor() {
+        owner = msg.sender;
+	user_balance[owner] = totalSupply;
+
+    }
+
+4. 
+ function transfer(address recipient, uint amount) public onlyOwner {
+        uint newOwnerBalance = balance[owner] - amount;
+        uint newRecipientBalance = balance[recipient] + amount;
+        balance[recipient] = newRecipientBalance;
+        balance[owner] = newOwnerBalance;
+   }  
+
+4. a) We don't need the sender address because only the owner should be able to be the sender of any transferred tokens. 
+
+4. b) This would mean a 3rd party could send token from userA to userB. 
+
+5. 
+   event Transfer(address, uint);
+   function transfer(address recipient, uint amount) public onlyOwner {
+        uint newOwnerBalance = balance[owner] - amount;
+        uint newRecipientBalance = balance[recipient] + amount;
+        balance[recipient] = newRecipientBalance;
+        balance[owner] = newOwnerBalance;
+        emit Transfer(recipient, amount);
+   }
+
+
+6.
+struct Payment { 
+	address recipient;
+	uint amount; 
+}
+
+
+7. We want to reference a payments array to each user sending the payment. 
+Create a mapping which returns an array of Payment structs when given this user’s address.
+
+Payment[] transfers;
+mapping(address => transfers) userPayments;
+
+
+
+
