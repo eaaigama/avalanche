@@ -1,16 +1,15 @@
 // SPDX-License-Identifier: UNLICENSED 
 
-pragma solidity >=0.7.0 <0.9.0;
-
 /** 
  * @title VolcanoCoin
- * @dev hw3
+ * @dev hw4
  */
  
 contract VolcanoCoin {
+    
     uint totalSupply = 10000;
     address owner;
-    mapping(address => unit) balance;
+    mapping(address => uint) balance;
     
     constructor() {
         owner = msg.sender;
@@ -24,7 +23,7 @@ contract VolcanoCoin {
     }
     
     Payment[] public transfers;
-    mapping(address => transfers) public userPayments;
+    mapping(address => Payment[]) public userPayments;
     
     modifier onlyOwner {
         if (msg.sender == owner) {
@@ -32,7 +31,7 @@ contract VolcanoCoin {
         }
     }
     
-    function getSupply() public returns (uint) {
+    function getSupply() public view returns (uint) {
         return totalSupply;
     }
     
@@ -49,8 +48,9 @@ contract VolcanoCoin {
         balance[recipient] = newRecipientBalance;
         balance[owner] = newOwnerBalance;
         emit Transfer(recipient, amount);
-        transfers.push(Payment({recipient:recipient,amount:amount}))
+        transfers.push(Payment({recipient:recipient,amount:amount}));
    } 
 
 
 }
+
